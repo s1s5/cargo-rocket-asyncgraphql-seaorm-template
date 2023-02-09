@@ -1,0 +1,18 @@
+[package]
+name = "api"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+entity = { path = "../entity" }
+
+rocket = "0.5.0-rc.2"
+async-graphql = { version="*", features=[ "dataloader", "log", "opentelemetry" ]}
+async-graphql-rocket = "*"
+tokio = { version = "^1", features = ["macros", "rt-multi-thread", "io-util"] }
+uuid = "*"
+ulid = "*"
+chrono = "*"
+
